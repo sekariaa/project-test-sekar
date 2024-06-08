@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -83,7 +83,7 @@ export default function CardList() {
   };
 
   return (
-    <div>
+    <Suspense>
       <Filtering
         params={params}
         setParams={(newParams: any) => {
@@ -100,7 +100,7 @@ export default function CardList() {
             {ideas.length === 0 ? (
               <NoDataHandling />
             ) : (
-              <div className="px-3 md:px-28 mb-5 grid grid-cols-1 gap-x-5 gap-y-8 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ">
+              <div className="px-3 md:px-28 mb-5 gap-x-5 gap-y-8 grid grid-cols-1 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ">
                 {ideas.map((idea) => (
                   <div key={idea.id}>
                     <CardComponent idea={idea} />
@@ -116,6 +116,6 @@ export default function CardList() {
         page={params["page"]}
         onChange={handlePageChange}
       />
-    </div>
+    </Suspense>
   );
 }
