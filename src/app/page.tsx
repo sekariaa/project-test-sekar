@@ -6,17 +6,13 @@ import CardList from "@/components/Card/CardList";
 const Page: React.FC = () => {
   return (
     <section className="mx-auto max-w-[1640px]">
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
       <HeroImage
         title="Ideas"
         subtitle="Where all our great things begin"
         backgroundImage="/ideas-bg.jpg"
       />
-      <div className="">
-        <CardList />
-      </div>
+      <CardList />
     </section>
   );
 };

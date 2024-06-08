@@ -25,31 +25,37 @@ const CardComponent: React.FC<Props> = ({ idea }) => {
   });
 
   return (
-    <div className="px-3 md:px-28 mb-5">
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="/about-bg.jpg"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              {formattedDate}
-            </Typography>
-            <Typography
-              gutterBottom
-              variant="h6"
-              component="div"
-              sx={{ fontWeight: "bold" }}
-            >
-              {title}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+    <CardActionArea>
+      <Card sx={{ maxWidth: 345, minHeight: 330 }}>
+        <CardMedia
+          component="img"
+          height="140"
+          image="/about-bg.jpg"
+          alt="image card"
+          loading="lazy"
+        />
+        <CardContent>
+          <Typography variant="body2" color="text.secondary">
+            {formattedDate}
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="body1"
+            component="div"
+            sx={{
+              fontWeight: "bold",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+            }}
+          >
+            {title}
+          </Typography>
+        </CardContent>
       </Card>
-    </div>
+    </CardActionArea>
   );
 };
 

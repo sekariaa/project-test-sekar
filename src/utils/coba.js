@@ -1,19 +1,19 @@
 // Import dependencies
-const axios = require('axios');
-const getProxyForUrl = require('proxy-from-env').getProxyForUrl;
+const axios = require("axios");
+const getProxyForUrl = require("proxy-from-env").getProxyForUrl;
 
 // API endpoint URL
-const apiUrl = 'https://suitmedia-backend.suitdev.com/api/ideas';
+const apiUrl = "https://suitmedia-backend.suitdev.com/api/ideas";
 
 // Function to fetch data
 const fetchData = async () => {
   try {
     // Parameters
     const params = {
-      'page[number]': 1,
-      'page[size]': 1,
-      append: ['small_image', 'medium_image'],
-      sort: '-published_at'
+      "page[number]": 100,
+      "page[size]": 10,
+      append: ["small_image", "medium_image"],
+      sort: "-published_at",
     };
 
     // Get proxy URL based on the API URL
@@ -28,7 +28,7 @@ const fetchData = async () => {
     // Log the data
     console.log(response.data);
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 };
 
