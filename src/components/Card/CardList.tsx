@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ActionAreaCard from "./CardComponent";
+import CardComponent from "./CardComponent";
 import axios from "axios";
 
 const params = {
@@ -39,7 +39,7 @@ export default function CardList() {
   return (
     <div>
       {ideas.map((idea) => (
-        <ActionAreaCard key={idea.id} idea={idea} />
+        <CardComponent key={idea.id} idea={idea} />
       ))}
     </div>
   );

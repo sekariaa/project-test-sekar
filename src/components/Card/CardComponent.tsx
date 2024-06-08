@@ -15,7 +15,7 @@ interface Props {
   idea: Idea;
 }
 
-const ActionAreaCard: React.FC<Props> = ({ idea }) => {
+const CardComponent: React.FC<Props> = ({ idea }) => {
   const { title, published_at } = idea;
 
   const formattedDate = new Date(published_at).toLocaleDateString("id-ID", {
@@ -53,4 +53,4 @@ const ActionAreaCard: React.FC<Props> = ({ idea }) => {
   );
 };
 
-export default ActionAreaCard;
+export default CardComponent;
