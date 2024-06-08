@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "@/components/HeroImage";
-import CardComponent from "@/components/CardComponent";
 import Navbar from "@/components/Navbar";
+import CardList from "@/components/Card/CardList";
 
 const Page: React.FC = () => {
   return (
@@ -15,8 +15,7 @@ const Page: React.FC = () => {
         backgroundImage="/ideas-bg.jpg"
       />
       <div className="">
-        <CardComponent /> <CardComponent /> <CardComponent /> <CardComponent />{" "}
-        <CardComponent /> <CardComponent /> <CardComponent /> <CardComponent />
+        <CardList />
       </div>
     </section>
   );
