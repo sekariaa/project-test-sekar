@@ -10,8 +10,8 @@ const fetchData = async () => {
   try {
     // Parameters
     const params = {
-      "page[number]": 100,
-      "page[size]": 10,
+      "page[number]": 1,
+      "page[size]": 1,
       append: ["small_image", "medium_image"],
       sort: "-published_at",
     };

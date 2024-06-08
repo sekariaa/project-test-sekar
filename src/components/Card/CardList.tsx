@@ -34,8 +34,8 @@ export default function CardList() {
   }, 2000);
 
   useEffect(() => {
-    const pageNumber = searchParams.get("page") || defaultParams["page"];
-    const pageSize = searchParams.get("size") || defaultParams["size"];
+    const pageNumber = searchParams.get("page") || defaultParams.page;
+    const pageSize = searchParams.get("size") || defaultParams.size;
     const sort = searchParams.get("sort") || defaultParams.sort;
 
     setParams({
@@ -52,8 +52,8 @@ export default function CardList() {
           "https://suitmedia-backend.suitdev.com/api/ideas",
           {
             params: {
-              "page[number]": searchParams.get("page") || defaultParams["page"],
-              "page[size]": searchParams.get("size") || defaultParams["size"],
+              "page[number]": searchParams.get("page") || defaultParams.page,
+              "page[size]": searchParams.get("size") || defaultParams.size,
               sort: searchParams.get("sort") || defaultParams.sort,
             },
           }

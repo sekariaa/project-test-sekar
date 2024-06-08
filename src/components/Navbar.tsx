@@ -65,17 +65,12 @@ const Navbar = () => {
         height={100}
         style={{ width: "auto", height: "auto" }}
       />
-      <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        sx={{ mr: 2 }}
-        onClick={toggleMenu}
-        className="text-white md:hidden"
-      >
-        <MenuIcon />
-      </IconButton>
+      <div className="md:hidden">
+        <IconButton size="large" aria-label="menu" onClick={toggleMenu}>
+          <MenuIcon className="text-white" />
+        </IconButton>
+      </div>
+
       <ul
         className={`${
           isMenuOpen
