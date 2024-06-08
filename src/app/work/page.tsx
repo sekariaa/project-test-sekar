@@ -1,6 +1,5 @@
 import React from "react";
 import HeroImage from "@/components/HeroImage";
-import CardComponent from "@/components/CardComponent";
 import Navbar from "@/components/Navbar";
 
 const Page = () => {
@@ -14,10 +13,6 @@ const Page = () => {
         subtitle="Work Page"
         backgroundImage="work-bg.jpeg"
       />
-      <div className="">
-        <CardComponent /> <CardComponent /> <CardComponent /> <CardComponent />{" "}
-        <CardComponent /> <CardComponent /> <CardComponent /> <CardComponent />
-      </div>
     </section>
   );
 };
